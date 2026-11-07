@@ -1,0 +1,86 @@
+ .marketmind-page {
+  color: var(--text-primary, #f4f7fb);
+  background: var(--panel-bg, #111923);
+  border: 1px solid rgba(145, 165, 195, .2);
+  border-radius: 20px;
+  overflow: visible;
+  margin: 20px 0;
+}
+.marketmind-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 22px 24px;
+  border-bottom: 1px solid rgba(145, 165, 195, .16);
+}
+.marketmind-logo, .marketmind-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  color: white;
+  font-weight: 800;
+  background: linear-gradient(135deg, #387df5, #7d5be8);
+}
+.marketmind-header h2 { margin: 0 0 4px; font-size: 1.25rem; }
+.marketmind-header p { margin: 0; color: var(--text-muted, #9ba9bc); font-size: .88rem; }
+.marketmind-status { margin-left: auto; font-size: .78rem; color: #45d6a0; white-space: nowrap; }
+.marketmind-status i { display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 50%; background: currentColor; }
+.marketmind-company-search { padding: 20px 24px; border-bottom: 1px solid rgba(145, 165, 195, .16); }
+.marketmind-company-search label { display: block; margin-bottom: 9px; font-weight: 650; font-size: .9rem; }
+.marketmind-search-wrap { position: relative; }
+.marketmind-search-wrap input, .marketmind-composer input {
+  width: 100%; min-width: 0; box-sizing: border-box; padding: 13px 15px;
+  border: 1px solid rgba(145, 165, 195, .3); border-radius: 11px;
+  background: rgba(4, 10, 20, .35); color: inherit; outline: none; font: inherit;
+}
+.marketmind-search-wrap input:focus, .marketmind-composer input:focus { border-color: #5b9dff; box-shadow: 0 0 0 3px rgba(91,157,255,.12); }
+.marketmind-search-status { display: block; margin-top: 6px; color: var(--text-muted, #9ba9bc); font-size: .8rem; }
+.marketmind-results {
+  position: absolute; z-index: 30; top: calc(100% + 6px); left: 0; right: 0;
+  max-height: 290px; overflow-y: auto; border: 1px solid rgba(145, 165, 195, .3);
+  border-radius: 12px; background: #151e2b; box-shadow: 0 16px 35px rgba(0,0,0,.35);
+}
+.marketmind-results button {
+  display: flex; width: 100%; gap: 12px; padding: 12px 14px; text-align: left;
+  border: 0; border-bottom: 1px solid rgba(145,165,195,.12); background: transparent; color: inherit; cursor: pointer;
+}
+.marketmind-results button:hover { background: rgba(91,157,255,.12); }
+.marketmind-results button strong { min-width: 105px; color: #78aaff; }
+.marketmind-results button span { opacity: .82; }
+.marketmind-selected { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 12px; font-size: .88rem; }
+.marketmind-selected span:first-child { color: var(--text-muted, #9ba9bc); }
+.marketmind-selected strong { color: #78aaff; }
+.marketmind-chat { padding: 20px 24px 16px; }
+.marketmind-messages { display: flex; flex-direction: column; gap: 17px; max-height: 520px; overflow-y: auto; padding: 2px 2px 18px; }
+.marketmind-message { display: flex; align-items: flex-start; gap: 10px; }
+.marketmind-message.user { justify-content: flex-end; }
+.marketmind-message.assistant .marketmind-avatar { width: 30px; height: 30px; border-radius: 10px; font-size: .78rem; }
+.marketmind-bubble { max-width: min(88%, 720px); padding: 12px 15px; border: 1px solid rgba(145,165,195,.17); border-radius: 13px; background: rgba(145,165,195,.07); }
+.marketmind-message.user .marketmind-bubble { background: rgba(56,125,245,.14); border-color: rgba(91,157,255,.25); }
+.marketmind-role { display: block; margin-bottom: 6px; font-size: .76rem; color: #86b1ff; font-weight: 700; }
+.marketmind-bubble p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.65; font-size: .92rem; }
+.marketmind-thinking { color: var(--text-muted, #9ba9bc); font-size: .85rem; padding: 8px 0; }
+.marketmind-starters { display: flex; gap: 8px; flex-wrap: wrap; margin: 5px 0 15px; }
+.marketmind-starters button {
+  padding: 8px 11px; border-radius: 999px; border: 1px solid rgba(145,165,195,.25);
+  background: transparent; color: inherit; font: inherit; font-size: .8rem; cursor: pointer;
+}
+.marketmind-starters button:hover { border-color: #5b9dff; background: rgba(91,157,255,.09); }
+.marketmind-starters button:disabled { opacity: .5; cursor: not-allowed; }
+.marketmind-composer { display: flex; align-items: center; gap: 10px; }
+.marketmind-composer button {
+  flex: 0 0 auto; padding: 12px 17px; border: 0; border-radius: 11px;
+  color: white; background: #347cf5; font: inherit; font-weight: 700; cursor: pointer;
+}
+.marketmind-composer button:disabled { opacity: .5; cursor: not-allowed; }
+.marketmind-disclaimer { margin: 13px 0 0; color: var(--text-muted, #9ba9bc); font-size: .76rem; line-height: 1.5; }
+@media (max-width: 620px) {
+  .marketmind-header, .marketmind-company-search, .marketmind-chat { padding-left: 14px; padding-right: 14px; }
+  .marketmind-status { display: none; }
+  .marketmind-composer { align-items: stretch; }
+  .marketmind-composer button { padding: 10px 12px; }
+  .marketmind-results button strong { min-width: 80px; }
+}
