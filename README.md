@@ -220,7 +220,7 @@ The platform analyses available historical market data and generates AI-assisted
 
 ## 👩‍💻 Developer
 
-**Sneha Singh Chauhan**
+Sneha Singh Chauhan
 
 B.Tech — Computer Science and Engineering (Artificial Intelligence)
 
@@ -237,4 +237,4 @@ Interested in Artificial Intelligence, Machine Learning, Generative AI and intel
 
 🚧 **Status: Under Active Development**
 
-MarketPulse AI is an ongoing project. Core features are implemented, and we are continuously improving AI analysis, data reliability and research capabilities.
+MarketPulse AI is an ongoing project. Core features are implemented, and I am continuously improving AI analysis, data reliability and research capabilities.
